@@ -1,7 +1,3 @@
-import discord
-import logging 
-import urllib.request
-
 from discord.ext import commands
 from wakeonlan import send_magic_packet
 
