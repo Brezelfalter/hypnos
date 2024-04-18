@@ -23,8 +23,7 @@ intents.message_content = True
 
 bot = Bot(
     command_prefix=commands.when_mentioned_or("!"),
-    intents=intents,
-    help_command=None,
+    intents=intents
 )
 
 
@@ -114,7 +113,7 @@ async def status_task() -> None:
     """
     Setup the game status task of the bot.
     """
-    v_status = f"with _magic_ pakets (v{bot.config['version']})"
+    v_status = f"with magic pakets (v{bot.config['version']})"
     statuses = [v_status]
     await bot.change_presence(activity=discord.Game(random.choice(statuses)))
 
