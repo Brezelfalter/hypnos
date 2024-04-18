@@ -6,10 +6,6 @@ from discord.ext import commands
 from wakeonlan import send_magic_packet
 
 
-logger = logging.getLogger("discord_bot")
-logger.setLevel(logging.INFO)
-
-
 class WakeUp(commands.Cog):
     """
     the basic system functions
@@ -19,7 +15,7 @@ class WakeUp(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-        
+
     @commands.command(brief="Wakeup my PC from sleep.")
     async def wakeup(self, ctx):
         # send magic packet to my pc, using mac address and ip address
